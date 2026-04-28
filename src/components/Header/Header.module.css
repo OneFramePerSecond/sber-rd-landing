@@ -1,0 +1,194 @@
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 100;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 24px;
+  height: 56px;
+  background: transparent;
+  transition: background 0.3s ease, box-shadow 0.3s ease, backdrop-filter 0.3s ease;
+}
+
+.scrolled {
+  background: rgba(255, 255, 255, 0.75);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  box-shadow: 0 2px 16px rgba(0, 0, 0, 0.06);
+  border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+}
+
+.logo {
+  z-index: 110;
+  display: flex;
+  align-items: center;
+}
+
+.logoImg {
+  height: 36px;
+  width: auto;
+  display: block;
+  transition: filter 0.3s ease;
+}
+
+.logoWhite {
+  filter: brightness(0) invert(1);
+}
+
+/* Десктопное меню */
+.desktopNav {
+  display: flex;
+  gap: 8px;
+}
+
+.desktopNavItem {
+  background: none;
+  border: none;
+  padding: 8px 12px;
+  font-size: 14px;
+  cursor: pointer;
+  border-radius: 8px;
+  color: #fff;
+  transition: background 0.2s, color 0.3s;
+}
+
+.scrolled .desktopNavItem {
+  color: #333;
+}
+
+.desktopNavItem:hover {
+  background: rgba(255, 255, 255, 0.15);
+}
+
+.scrolled .desktopNavItem:hover {
+  background: #f0f0f0;
+}
+
+.desktopNavItemActive {
+  background: rgba(255, 255, 255, 0.2);
+  font-weight: 600;
+}
+
+.scrolled .desktopNavItemActive {
+  background: #e8f5e9;
+  color: #34C924;
+}
+
+/* Бургер */
+.burger {
+  display: none;
+  flex-direction: column;
+  gap: 5px;
+  background: none;
+  border: none;
+  padding: 4px;
+  z-index: 110;
+}
+
+.burgerLine {
+  display: block;
+  width: 22px;
+  height: 2px;
+  background: #fff;
+  border-radius: 2px;
+  transition: transform 0.3s, opacity 0.3s, background 0.3s;
+}
+
+.scrolled .burgerLine {
+  background: #333;
+}
+
+.burgerLine.open:nth-child(1) {
+  transform: translateY(7px) rotate(45deg);
+}
+
+.burgerLine.open:nth-child(2) {
+  opacity: 0;
+}
+
+.burgerLine.open:nth-child(3) {
+  transform: translateY(-7px) rotate(-45deg);
+}
+
+/* Мобильное меню (портал в body) */
+.mobileNav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: #fff;
+  z-index: 105;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transform: translateY(-100%);
+  transition: transform 0.3s ease;
+}
+
+.mobileNavOpen {
+  transform: translateY(0);
+}
+
+.mobileNavInner {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 24px;
+}
+
+.mobileNavItem {
+  background: none;
+  border: none;
+  font-family: 'SBSansDisplay', sans-serif;
+  font-weight: 600;
+  font-size: 20px;
+  color: #333;
+  cursor: pointer;
+  padding: 12px 24px;
+  border-radius: 12px;
+  transition: background 0.2s, color 0.2s;
+}
+
+.mobileNavItem:hover {
+  background: #f0f0f0;
+}
+
+.mobileNavItemActive {
+  background: #e8f5e9;
+  color: #34C924;
+}
+
+/* Медиа-запросы */
+@media (max-width: 768px) {
+  .desktopNav {
+    display: none;               /* десктопное меню скрыто */
+  }
+
+  .burger {
+    display: flex;                /* бургер виден */
+  }
+}
+
+/* Крестик в мобильном меню */
+.closeBtn {
+  position: absolute;
+  top: 16px;
+  right: 16px;
+  background: none;
+  border: none;
+  font-size: 28px;
+  color: #888;
+  cursor: pointer;
+  z-index: 115; /* выше меню, но можно и 106, не принципиально */
+  transition: color 0.2s;
+  line-height: 1;
+  padding: 8px;
+}
+
+.closeBtn:hover {
+  color: #111;
+}

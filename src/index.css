@@ -1,0 +1,78 @@
+/* Подключение фирменных шрифтов Сбера (Display) */
+@font-face {
+  font-family: 'SBSansDisplay';
+  src: url('/fonts/SBSansDisplay-Light.ttf') format('truetype');
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'SBSansDisplay';
+  src: url('/fonts/SBSansDisplay-Semibold.ttf') format('truetype');
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap;
+}
+
+/* Глобальные сбросы */
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+  width: 100%;
+  height: 100%;
+}
+
+body {
+  font-family: 'Roboto', 'Helvetica Neue', Arial, sans-serif;
+  color: #1a1a1a;
+  background: #ffffff;
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  width: 100%;
+  min-height: 100vh;
+  overflow-x: hidden;  /* горизонтальный скролл точно не нужен */
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'SBSansDisplay', 'Roboto', sans-serif;
+  font-weight: 600;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+button {
+  font-family: inherit;
+  cursor: pointer;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+ul, ol {
+  list-style: none;
+}
+
+#root {
+  width: 100%;
+  min-height: 100vh;
+  position: relative;
+}
+
+/* Фикс якорной навигации */
+section[id] {
+  scroll-margin-top: 56px;
+}

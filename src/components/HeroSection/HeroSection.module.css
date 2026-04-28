@@ -1,0 +1,76 @@
+.hero {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  overflow: hidden;
+
+  background: url('/images/hero-bg.jpg') center / cover no-repeat;
+  color: #fff;
+  text-align: center;
+  padding: 80px 24px 40px;
+}
+
+/* Затемняющий слой поверх фото */
+.hero::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.45); /* затемнение для читаемости текста */
+  z-index: 1;
+}
+
+.content {
+  max-width: 700px;
+  position: relative; /* чтобы текст был поверх затемнения */
+  z-index: 2;
+}
+
+.title {
+  font-family: 'SBSansDisplay', sans-serif;
+  font-weight: 600;
+  font-size: 36px;
+  margin-bottom: 8px;
+}
+
+.subtitle {
+  font-family: 'SBSansDisplay', sans-serif;
+  font-weight: 300;
+  font-size: 20px;
+  opacity: 0.9;
+  margin-bottom: 24px;
+}
+
+.mission {
+  font-family: 'Roboto', sans-serif;
+  font-size: 16px;
+  line-height: 1.6;
+  opacity: 0.9;
+  margin-bottom: 32px;
+}
+
+.link {
+  color: #fff;
+  border: 1px solid rgba(255, 255, 255, 0.5);
+  padding: 10px 24px;
+  border-radius: 8px;
+  text-decoration: none;
+  display: inline-block;
+  font-family: 'SBSansDisplay', sans-serif;
+  font-weight: 600;
+  transition: background 0.2s;
+}
+
+.link:hover {
+  background: rgba(255, 255, 255, 0.15);
+}
+
+@media (max-width: 480px) {
+  .title {
+    font-size: 26px;
+  }
+  .subtitle {
+    font-size: 16px;
+  }
+}

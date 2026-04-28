@@ -1,0 +1,252 @@
+.section {
+  padding: 80px 24px;
+  max-width: 1000px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.title {
+  font-family: 'SBSansDisplay', sans-serif;
+  font-weight: 600;
+  font-size: 32px;
+  color: #111;
+  margin-bottom: 8px;
+}
+
+/* Общий рейтинг */
+.rating {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  margin-bottom: 40px;
+}
+
+.starsRating {
+  font-size: 26px;
+  color: #FFB800;
+  letter-spacing: 4px;
+  line-height: 1;
+}
+
+.score {
+  font-family: 'SBSansDisplay', sans-serif;
+  font-weight: 600;
+  font-size: 24px;
+  color: #111;
+}
+
+/* Карусель */
+.carousel {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  position: relative;
+}
+
+.arrow {
+  background: none;
+  border: 1px solid #ddd;
+  border-radius: 50%;
+  width: 44px;
+  height: 44px;
+  font-size: 22px;
+  color: #333;
+  cursor: pointer;
+  transition: background 0.2s;
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.arrow:hover {
+  background: #f5f5f5;
+}
+
+/* Трек с карточками */
+.track {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0;
+  flex: 1;
+  overflow: hidden;
+  position: relative;
+  height: 380px; /* фиксированная высота, чтобы карточки не дёргались */
+}
+
+.cardWrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Базовые стили карточек */
+.card {
+  background: #fff;
+  border-radius: 20px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.04);
+  text-align: center;
+  transition: box-shadow 0.2s;
+  cursor: pointer;
+}
+
+.card:hover {
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
+}
+
+/* Центральная карточка */
+.cardCenter {
+  width: 360px;
+  padding: 36px 32px;
+  opacity: 1;
+}
+
+/* Боковая карточка */
+.cardSide {
+  width: 220px;
+  padding: 24px 20px;
+  opacity: 0.8;
+}
+
+/* Аватар на центральной */
+.avatarCenter {
+  width: 72px;
+  height: 72px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, #34C924, #2a9d1f);
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: 'SBSansDisplay', sans-serif;
+  font-weight: 600;
+  font-size: 24px;
+  margin: 0 auto 16px;
+}
+
+/* Аватар на боковой */
+.avatarSide {
+  width: 56px;
+  height: 56px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, #34C924, #2a9d1f);
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: 'SBSansDisplay', sans-serif;
+  font-weight: 600;
+  font-size: 20px;
+  margin: 0 auto 12px;
+}
+
+.photo {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 50%;
+}
+
+/* Текст центральной */
+.name {
+  font-family: 'SBSansDisplay', sans-serif;
+  font-weight: 600;
+  font-size: 18px;
+  color: #111;
+  margin-bottom: 4px;
+}
+
+.role {
+  font-family: 'Roboto', sans-serif;
+  font-size: 13px;
+  color: #888;
+  margin-bottom: 16px;
+}
+
+.text {
+  font-family: 'Roboto', sans-serif;
+  font-size: 15px;
+  line-height: 1.5;
+  color: #444;
+  margin-bottom: 16px;
+}
+
+.starsRow {
+  color: #FFB800;
+  font-size: 18px;
+  letter-spacing: 2px;
+}
+
+/* Текст боковой */
+.nameSmall {
+  font-family: 'SBSansDisplay', sans-serif;
+  font-weight: 600;
+  font-size: 14px;
+  color: #111;
+  margin-bottom: 2px;
+}
+
+.roleSmall {
+  font-family: 'Roboto', sans-serif;
+  font-size: 11px;
+  color: #888;
+  margin-bottom: 10px;
+}
+
+.textSmall {
+  font-family: 'Roboto', sans-serif;
+  font-size: 12px;
+  line-height: 1.4;
+  color: #555;
+  margin-bottom: 10px;
+}
+
+.starsSmall {
+  color: #FFB800;
+  font-size: 14px;
+  letter-spacing: 1px;
+}
+
+/* Точки */
+.dots {
+  display: flex;
+  justify-content: center;
+  gap: 8px;
+  margin-top: 28px;
+}
+
+.dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: #ddd;
+  border: none;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.dotActive {
+  background: #34C924;
+}
+
+@media (max-width: 680px) {
+  .cardCenter {
+    width: 280px;
+    padding: 24px 20px;
+  }
+  .cardSide {
+    width: 160px;
+    padding: 18px 14px;
+  }
+  .track {
+    height: 340px;
+  }
+  .arrow {
+    width: 36px;
+    height: 36px;
+    font-size: 18px;
+  }
+}
