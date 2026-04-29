@@ -14,7 +14,7 @@ export default function Footer() {
   return (
     <footer className={styles.footer}>
       <div className={styles.inner}>
-        {/* Логотип */}
+        {}
         <div className={styles.logo}>
           <img src="/images/sber-logo.svg" alt="Сбер" className={styles.logoImg} />
         </div>

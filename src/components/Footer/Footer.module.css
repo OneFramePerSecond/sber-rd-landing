@@ -21,7 +21,7 @@
 .logoImg {
   height: 32px;
   width: auto;
-  filter: none; /* родной цвет логотипа */
+  filter: none; 
 }
 
 .links {

@@ -1,7 +1,7 @@
 .card {
   position: relative;
   border-radius: 20px;
-  padding: 36px 28px;  /* больше воздуха */
+  padding: 36px 28px;  
   color: #fff;
   background-size: cover;
   background-position: center;
@@ -9,7 +9,7 @@
   transition: transform 0.25s ease, box-shadow 0.25s ease;
   display: flex;
   flex-direction: column;
-  min-height: 360px;    /* длиннее */
+  min-height: 360px;    
   justify-content: flex-end;
 }
 

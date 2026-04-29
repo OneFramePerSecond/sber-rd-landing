@@ -34,7 +34,7 @@
   line-height: 1;
 }
 
-/* Оверлей (теперь используется и на десктопе, но на десктопе он прозрачный и не фулскрин) */
+
 .overlay {
   position: fixed;
   inset: 0;
@@ -51,11 +51,11 @@
   .overlay {
     background: transparent;
     backdrop-filter: none;
-    pointer-events: none;   /* клики проходят сквозь оверлей */
+    pointer-events: none;   
   }
 
   .overlay > * {
-    pointer-events: auto;   /* панель кликабельна */
+    pointer-events: auto;   
   }
 }
 

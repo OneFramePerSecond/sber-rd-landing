@@ -38,7 +38,7 @@
   filter: brightness(0) invert(1);
 }
 
-/* Десктопное меню */
+
 .desktopNav {
   display: flex;
   gap: 8px;
@@ -77,7 +77,7 @@
   color: #34C924;
 }
 
-/* Бургер */
+
 .burger {
   display: none;
   flex-direction: column;
@@ -165,11 +165,11 @@
 /* Медиа-запросы */
 @media (max-width: 768px) {
   .desktopNav {
-    display: none;               /* десктопное меню скрыто */
+    display: none;               
   }
 
   .burger {
-    display: flex;                /* бургер виден */
+    display: flex;               
   }
 }
 
@@ -183,7 +183,7 @@
   font-size: 28px;
   color: #888;
   cursor: pointer;
-  z-index: 115; /* выше меню, но можно и 106, не принципиально */
+  z-index: 115; 
   transition: color 0.2s;
   line-height: 1;
   padding: 8px;
